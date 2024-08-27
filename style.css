@@ -1,13 +1,35 @@
+.helper-container {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    gap: 10px;
+}
+
 .theme-selector {
     cursor: pointer;
     min-width: 5em;
     user-select: none;
     background-color: var(--color-text-default);
     color: var(--color-background);
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+.github-repo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-background);
+    background-color: var(--color-text-default);
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+.github-repo svg {
+    width: 1.5em;
+    height: 1.5em;
 }
