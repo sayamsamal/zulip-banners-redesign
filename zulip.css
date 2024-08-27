@@ -1,0 +1,46 @@
+:root {
+    --disabled-scrollbar-width: 0px;
+    --base-font-size-px: 16px;
+    --base-line-height-unitless: 1.4;
+    --legacy-body-line-height-unitless: calc(20 / 14);
+}
+
+:root,
+:root[data-theme="light"] {
+    --color-text-default: hsl(0deg 0% 20%);
+    --color-background: hsl(0deg 0% 94%);
+}
+
+:root[data-theme="dark"] {
+    --color-text-default: hsl(0deg 0% 100% / 75%);
+    --color-background: hsl(0deg 0% 11%);
+}
+
+html {
+    overflow: hidden scroll;
+    overscroll-behavior-y: none;
+    width: calc(100% - var(--disabled-scrollbar-width));
+}
+
+body,
+html {
+    height: 100%;
+    touch-action: manipulation;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: var(--base-font-size-px);
+    /* The line-height used in most of the UI should be at least
+       its legacy value, but should expand with larger base
+       line-height values. */
+    line-height: max(
+        var(--legacy-body-line-height-unitless),
+        var(--base-line-height-unitless)
+    );
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--color-text-default);
+    background-color: var(--color-background);
+}
