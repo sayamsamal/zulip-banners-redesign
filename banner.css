@@ -1,0 +1,184 @@
+/* TODO: Discuss on the naming convention of the CSS variables.
+    - postcss-color-mix-function does not support var().
+    - should we use the variables defined in the Figma file from Vlad?
+*/
+:root {
+    --color-banner-brand-bg: #ECE9F6;
+    --color-banner-brand-text: #4704AA;
+    --color-banner-brand-close-btn: var(--purple-600);
+    --color-banner-brand-border: color-mix(in oklch, #5633CC 40%, transparent);
+    --color-brand-cta-btn-text: #FFFFFF;
+    --color-brand-cta-btn-bg: #805BFE;
+    --color-brand-cta-btn-bg-hover: #7349EC;
+    --color-brand-cta-btn-bg-active: #612FD4;
+    --color-brand-default-btn-text: #4704AA;
+    --color-brand-default-btn-bg: color-mix(in oklch, #805BFE 12%, transparent);
+    --color-brand-default-btn-bg-hover: color-mix(in oklch, #805BFE 17%, transparent);
+    --color-brand-default-btn-bg-active: color-mix(in oklch, #805BFE 22%, transparent);
+    --color-brand-subtle-btn-text: var(--purple-600);
+    --color-brand-subtle-btn-bg-hover: color-mix(in oklch, #2C0070 5%, transparent);
+    --color-brand-subtle-btn-bg-active: color-mix(in oklch, #2C0070 10%, transparent);
+}
+
+:root[data-theme="dark"] {
+    --color-banner-brand-bg: #1E153D;
+    --color-banner-brand-text: var(--purple-300);
+    --color-banner-brand-close-btn: var(--purple-350);
+    --color-banner-brand-border: color-mix(in oklch, #D8CFF7 40%, transparent);
+    --color-brand-cta-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-brand-cta-btn-bg: #5417C3;
+    --color-brand-cta-btn-bg-hover: #612FD4;
+    --color-brand-cta-btn-bg-active: #5417C3;
+    --color-brand-default-btn-text: var(--purple-300);
+    --color-brand-default-btn-bg: color-mix(in oklch, var(--purple-350) 12%, transparent);
+    --color-brand-default-btn-bg-hover: color-mix(in oklch, var(--purple-350) 17%, transparent);
+    --color-brand-default-btn-bg-active: color-mix(in oklch, var(--purple-350) 12%, transparent);
+    --color-brand-subtle-btn-text: var(--purple-350);
+    --color-brand-subtle-btn-bg-hover: color-mix(in oklch, #8A6FFF 14%, transparent);
+    --color-brand-subtle-btn-bg-active: color-mix(in oklch, #8A6FFF 18%, transparent);
+}
+
+/* TODO: This does not account for the button variant that also contains a icon */
+.btn {
+    line-height: 1.3333;
+    font-weight: 550;
+    letter-spacing: 0.09px;
+    padding: 0.2667em 0.6667em;
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-bg);
+    cursor: pointer;
+    border-radius: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 240px; /* TODO: This should probably exist only on the button label. */
+    user-select: none;
+}
+
+.btn--cta {
+    --color-btn-text: var(--color-cta-btn-text);
+    --color-btn-bg: var(--color-cta-btn-bg);
+}
+
+.btn--cta:hover {
+    --color-btn-bg: var(--color-cta-btn-bg-hover);
+}
+
+.btn--cta:active {
+    --color-btn-bg: var(--color-cta-btn-bg-active);
+}
+
+.btn--default {
+    --color-btn-text: var(--color-default-btn-text);
+    --color-btn-bg: var(--color-default-btn-bg);
+}
+
+.btn--default:hover {
+    --color-btn-bg: var(--color-default-btn-bg-hover);
+}
+
+.btn--default:active {
+    --color-btn-bg: var(--color-default-btn-bg-active);
+}
+
+.btn--subtle {
+    --color-btn-text: var(--color-subtle-btn-text);
+    --color-btn-bg: transparent;
+}
+
+.btn--subtle:hover {
+    --color-btn-bg: var(--color-subtle-btn-bg-hover);
+}
+
+.btn--subtle:active {
+    --color-btn-bg: var(--color-subtle-btn-bg-active);
+}
+
+.btn--brand {
+    --color-cta-btn-text : var(--color-brand-cta-btn-text);
+    --color-cta-btn-bg : var(--color-brand-cta-btn-bg);
+    --color-cta-btn-bg-hover : var(--color-brand-cta-btn-bg-hover);
+    --color-cta-btn-bg-active : var(--color-brand-cta-btn-bg-active);
+    --color-default-btn-text : var(--color-brand-default-btn-text);
+    --color-default-btn-bg : var(--color-brand-default-btn-bg);
+    --color-default-btn-bg-hover : var(--color-brand-default-btn-bg-hover);
+    --color-default-btn-bg-active : var(--color-brand-default-btn-bg-active);
+    --color-subtle-btn-text : var(--color-brand-subtle-btn-text);
+    --color-subtle-btn-bg-hover : var(--color-brand-subtle-btn-bg-hover);
+    --color-subtle-btn-bg-active : var(--color-brand-subtle-btn-bg-active);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    color: var(--banner-text-color);
+    background-color: var(--banner-bg-color);
+    align-items: center;
+    font-size: 0.9375rem;
+}
+
+.banner__content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 6px;
+    padding: 0.3333em 0.8667em 0.3333em;
+    text-align: center;
+}
+
+.banner__label {
+    padding: 0.3333em 0 0.2667em;
+    line-height: 1.2667;
+}
+
+.banner__btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+/* TODO: Discuss the breakpoint, and the logic for the switch. */
+@media (width < 550px) {
+    .banner__content {
+        flex-direction: column;
+    }
+
+    .banner__btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .banner__btns .btn {
+        max-width: none;
+    }
+}
+
+.banner__close-btn {
+    font-size: 1.0667em;
+    display: flex;
+    align-self: flex-start;
+    padding: 0.6875em;
+    cursor: pointer;
+    color: color-mix(in oklch, var(--color-banner-close-btn) 70%, transparent);
+}
+
+.banner__close-btn:hover {
+    color: var(--color-banner-close-btn);
+}
+
+.banner__close-btn:active {
+    color: color-mix(in oklch, var(--color-banner-close-btn) 70%, transparent);
+}
+
+.banner--top {
+    border-bottom: 1px solid var(--color-banner-border);
+}
+
+.banner--brand {
+    --banner-bg-color: var(--color-banner-brand-bg);
+    --banner-text-color: var(--color-banner-brand-text);
+    --color-banner-close-btn: var(--color-banner-brand-close-btn);
+    --color-banner-border: var(--color-banner-brand-border);
+}
