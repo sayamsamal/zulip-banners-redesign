@@ -2,14 +2,51 @@
 
 let step = 0;
 
-const desktop_notification_banner = document.querySelector("[data-process='notifications']");
-const banner_close_btn = desktop_notification_banner.querySelector(".banner__close-btn");
+const navbar_alerts_banners = [
+    "bankruptcy",
+    "email-server",
+    "demo-organization-deadline",
+    "notifications",
+    "profile-missing-required",
+    "insecure-desktop-app",
+    "profile-incomplete",
+    "server-needs-upgrade"
+];
 
-banner_close_btn.addEventListener("click", () => {
-    const content = desktop_notification_banner.querySelectorAll(".banner__content");
-    content[step].classList.add("hidden");
-    console.log(step);
-    step = (step+1) % content.length;
-    console.log(step);
-    content[step].classList.remove("hidden");
+const load_banner_ui = () => {
+    const hash = new URL(document.URL).hash;
+    const hash_path_array = hash.split('/');
+    const banner_type = hash_path_array[1];
+    const banner_name = hash_path_array[2];
+    
+    if (banner_type === "navbar-alerts") {
+        if(navbar_alerts_banners.includes(banner_name)) {
+            const banners = document.querySelectorAll(".banner");
+            for(const banner of banners) {
+                if (!banner.classList.contains("hidden")) {
+                    banner.classList.add("hidden");
+                }
+            }
+            const banner = document.querySelector(`[data-process='${banner_name}']`);
+            banner.classList.remove("hidden");
+            const banner_select = document.querySelector("#banner-select");
+            banner_select.value = banner_name;
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    load_banner_ui();
+
+    const banner_select = document.querySelector("#banner-select");
+    banner_select.addEventListener("change", (e) => {
+        const banner_name = e.target.value;
+        if(navbar_alerts_banners.includes(banner_name)) {
+            location.hash = `/navbar-alerts/${banner_name}`;
+        }
+    })
 });
+
+window.addEventListener('hashchange', (e) => {
+    load_banner_ui();
+})

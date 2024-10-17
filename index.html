@@ -16,6 +16,18 @@
 </head>
 <body>
     <div class="helper-container">
+        <select class="banner-select" id="banner-select">
+            <optgroup label="Navbar Alerts">
+                <option value="bankruptcy">Bankruptcy</option>
+                <option value="email-server">Email Server</option>
+                <option value="demo-organization-deadline">Demo Organization Deadline</option>
+                <option value="notifications" selected="selected">Notifications</option>
+                <option value="profile-missing-required">Profile Missing Required</option>
+                <option value="insecure-desktop-app">Insecure Desktop App</option>
+                <option value="profile-incomplete">Profile Incomplete</option>
+                <option value="server-needs-upgrade">Server Needs Upgrade</option>
+            </optgroup>
+        </select>
         <div class="theme-selector">
             loading...
         </div>
@@ -41,18 +53,47 @@
         </a>
     </div>
     <div id="navbar_alerts_wrapper">
+        <div data-process="bankruptcy" class="banner banner--top banner--info hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    Welcome back! You have 12 unread messages. Do you want to mark them all as read?
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-info" tabindex=0>Yes, please!</a>
+                    <a role="button" class="btn btn--tertiary-info" tabindex=0>No, I'll catch up.</a>
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--info" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
+        </div>
+        <div data-process="email-server" class="banner banner--top banner--warning hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    Zulip needs to send email to confirm users' addresses and send notifications.
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-warning" tabindex=0>Configuration instructions</a>
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--warning" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
+        </div>
+        <div data-process="demo-organization-deadline" class="banner banner--top banner--info hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    This <a class="banner__link" href="https://zulip.com/help/demo-organizations" target="_blank" rel="noopener noreferrer">demo organization</a> will be automatically deleted in 30 days, unless it's <a class="banner__link" href="https://zulip.com/help/demo-organizations#convert-a-demo-organization-to-a-permanent-organization" target="_blank" rel="noopener noreferrer">converted into a permanent organization</a>.
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--info" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
+        </div>
         <div data-process="notifications" class="banner banner--top banner--brand">
             <div class="banner__content" data-step="1">
                 <span class="banner__label">
-                    Zulip needs your permission to enable desktop notifications.
-                </span>
-                <span class="banner__btns">
-                    <a role="button" class="btn btn--secondary-brand" tabindex=0>Enable notifications</a>
-                </span>
-            </div>
-            <div class="banner__content hidden" data-step="2">
-                <span class="banner__label">
-                    We strongly recommend enabling desktop notifications. They help Zulip keep your team connected.
+                    Zulip needs your permission to enable desktop notifications for messages you receive. You can <a class="banner__link" href="https://zulip.com/help/desktop-notifications#desktop-notifications" target="_blank" rel="noopener noreferrer">customize</a> what kinds of messages trigger notifications.
                 </span>
                 <span class="banner__btns">
                     <a role="button" class="btn btn--primary-brand" tabindex=0>Enable notifications</a>
@@ -63,6 +104,59 @@
             <span class="banner__close-btn icon-btn icon-btn--brand" tabindex="0">
                 <i class="zulip-icon zulip-icon-close"></i>
             </span>
+        </div>
+        <div data-process="profile-missing-required" class="banner banner--top banner--warning hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    Your profile is missing required fields.
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-warning" tabindex=0>Edit your profile</a>
+                </span>
+            </div>
+            <span class="banner__close-btn icon-btn icon-btn--warning" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </span>
+        </div>
+        <div data-process="insecure-desktop-app" class="banner banner--top banner--danger hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    You are using an old version of the Zulip desktop app with known security bugs.
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-danger" tabindex=0>Download the latest version</a>
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--danger" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
+        </div>
+        <div data-process="profile-incomplete" class="banner banner--top banner--info hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    Complete your organization profile, which is displayed on your organization's registration and login pages.
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-info" tabindex=0>Edit profile</a>
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--info" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
+        </div>
+        <div data-process="server-needs-upgrade" class="banner banner--top banner--danger hidden">
+            <div class="banner__content" data-step="1">
+                <span class="banner__label">
+                    This Zulip server is running an old version and should be upgraded.
+                </span>
+                <span class="banner__btns">
+                    <a role="button" class="btn btn--secondary-danger" tabindex=0>Learn more</a>
+                    <a role="button" class="btn btn--tertiary-danger" tabindex=0>Dismiss for a week</a>
+                </span>
+            </div>
+            <a role="button" class="banner__close-btn icon-btn icon-btn--danger" tabindex="0">
+                <i class="zulip-icon zulip-icon-close"></i>
+            </a>
         </div>
     </div>
 </body>
