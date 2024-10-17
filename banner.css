@@ -3,39 +3,280 @@
     - should we use the variables defined in the Figma file from Vlad?
 */
 :root {
-    --color-banner-brand-bg: #ECE9F6;
-    --color-banner-brand-text: #4704AA;
-    --color-banner-brand-close-btn: var(--purple-600);
+    /* BANNERS */
+    --color-banner-link: #066BD0;
+    /* Banners - Neutral Variant */
+    --color-banner-neutral-label: #393C49;
+    --color-banner-neutral-border: color-mix(in oklch, #4B4B4E 40%, transparent);
+    --color-banner-neutral-bg: #ECECEE;
+    /* Banners - Info Variant */
+    --color-banner-info-label: #0E1CB3;
+    --color-banner-info-border: color-mix(in oklch, #26516E 40%, transparent);
+    --color-banner-info-bg: #DDECF6;
+    /* Banners - Brand Variant */
+    --color-banner-brand-label: #4704AA;
     --color-banner-brand-border: color-mix(in oklch, #5633CC 40%, transparent);
-    --color-brand-cta-btn-text: #FFFFFF;
-    --color-brand-cta-btn-bg: #805BFE;
-    --color-brand-cta-btn-bg-hover: #7349EC;
-    --color-brand-cta-btn-bg-active: #612FD4;
-    --color-brand-default-btn-text: #4704AA;
-    --color-brand-default-btn-bg: color-mix(in oklch, #805BFE 12%, transparent);
-    --color-brand-default-btn-bg-hover: color-mix(in oklch, #805BFE 17%, transparent);
-    --color-brand-default-btn-bg-active: color-mix(in oklch, #805BFE 22%, transparent);
-    --color-brand-subtle-btn-text: var(--purple-600);
-    --color-brand-subtle-btn-bg-hover: color-mix(in oklch, #2C0070 5%, transparent);
-    --color-brand-subtle-btn-bg-active: color-mix(in oklch, #2C0070 10%, transparent);
+    --color-banner-brand-bg: #ECE9F6;
+    /* Banners - Success Variant */
+    --color-banner-success-label: #054F22;
+    --color-banner-success-border: color-mix(in oklch, #1B643C 40%, transparent);
+    --color-banner-success-bg: #E1F3E9;
+    /* Banners - Warning Variant */
+    --color-banner-warning-label: #764607;
+    --color-banner-warning-border: color-mix(in oklch, #644E27 40%, transparent);
+    --color-banner-warning-bg: #FAF5DC;
+    /* Banners - Danger Variant */
+    --color-banner-danger-label: #AC0508;
+    --color-banner-danger-border: color-mix(in oklch, #842924 40%, transparent);
+    --color-banner-danger-bg: #F2E4E4;
+    /* BUTTONS */
+    /* Buttons -- Neutral Variant */
+    --color-neutral-primary-btn-text: #FFFFFF;
+    --color-neutral-primary-btn-bg: #777A88;
+    --color-neutral-primary-btn-bg-hover: #707380;
+    --color-neutral-primary-btn-bg-active: #696B78;
+    --color-neutral-secondary-btn-text: #393C49;
+    --color-neutral-secondary-btn-bg: color-mix(in oklch, #767988 12%, transparent);
+    --color-neutral-secondary-btn-bg-hover: color-mix(in oklch, #767988 17%, transparent);
+    --color-neutral-secondary-btn-bg-active: color-mix(in oklch, #767988 22%, transparent);
+    --color-neutral-tertiary-btn-text: #535663;
+    --color-neutral-tertiary-btn-bg-hover: color-mix(in oklch, #535663 7%, transparent);
+    --color-neutral-tertiary-btn-bg-active: color-mix(in oklch, #535663 11%, transparent);
+    /* Buttons -- Brand Variant */
+    --color-brand-primary-btn-text: #FFFFFF;
+    --color-brand-primary-btn-bg: #805BFE;
+    --color-brand-primary-btn-bg-hover: #7349EC;
+    --color-brand-primary-btn-bg-active: #612FD4;
+    --color-brand-secondary-btn-text: #4704AA;
+    --color-brand-secondary-btn-bg: color-mix(in oklch, #805BFE 12%, transparent);
+    --color-brand-secondary-btn-bg-hover: color-mix(in oklch, #805BFE 17%, transparent);
+    --color-brand-secondary-btn-bg-active: color-mix(in oklch, #805BFE 22%, transparent);
+    --color-brand-tertiary-btn-text: var(--purple-600);
+    --color-brand-tertiary-btn-bg-hover: color-mix(in oklch, #2C0070 5%, transparent);
+    --color-brand-tertiary-btn-bg-active: color-mix(in oklch, #2C0070 10%, transparent);
+    /* Buttons -- Info Variant */
+    --color-info-primary-btn-text: #FFFFFF;
+    --color-info-primary-btn-bg: #3C6BFF;
+    --color-info-primary-btn-bg-hover: #2E59EB;
+    --color-info-primary-btn-bg-active: #1E41D3;
+    --color-info-secondary-btn-text: #0E1CB3;
+    --color-info-secondary-btn-bg: color-mix(in oklch, #3C6BFF 12%, transparent);
+    --color-info-secondary-btn-bg-hover: color-mix(in oklch, #3C6BFF 17%, transparent);
+    --color-info-secondary-btn-bg-active: color-mix(in oklch, #3C6BFF 22%, transparent);
+    --color-info-tertiary-btn-text: #325CE3;
+    --color-info-tertiary-btn-bg-hover: color-mix(in oklch, #06037C 5%, transparent);
+    --color-info-tertiary-btn-bg-active: color-mix(in oklch, #06037C 9%, transparent);;
+    /* Buttons -- Success Variant */
+    --color-success-primary-btn-text: #FFFFFF;
+    --color-success-primary-btn-bg: #07833C;
+    --color-success-primary-btn-bg-hover: #087736;
+    --color-success-primary-btn-bg-active: #09672E;
+    --color-success-secondary-btn-text: #054F22;
+    --color-success-secondary-btn-bg: color-mix(in oklch, #07833C 13%, transparent);
+    --color-success-secondary-btn-bg-hover: color-mix(in oklch, #07833C 18%, transparent);
+    --color-success-secondary-btn-bg-active: color-mix(in oklch, #07833C 23%, transparent);
+    --color-success-tertiary-btn-text: #07833C;
+    --color-success-tertiary-btn-bg-hover: color-mix(in oklch, #09672E 8%, transparent);
+    --color-success-tertiary-btn-bg-active: color-mix(in oklch, #09672E 12%, transparent);
+    /* Buttons -- Warning Variant */
+    --color-warning-primary-btn-text: color-mix(in oklch, #000000 88%, transparent);
+    --color-warning-primary-btn-bg: #FEBE3D;
+    --color-warning-primary-btn-bg-hover: #F8B325;
+    --color-warning-primary-btn-bg-active: #EBA002;
+    --color-warning-secondary-btn-text: #764607;
+    --color-warning-secondary-btn-bg: color-mix(in oklch, #EBA002 18%, transparent);
+    --color-warning-secondary-btn-bg-hover: color-mix(in oklch, #EBA002 23%, transparent);
+    --color-warning-secondary-btn-bg-active: color-mix(in oklch, #EBA002 28%, transparent);
+    --color-warning-tertiary-btn-text: #A96A05;
+    --color-warning-tertiary-btn-bg-hover: color-mix(in oklch, #A96A05 10%, transparent);
+    --color-warning-tertiary-btn-bg-active: color-mix(in oklch, #A96A05 14%, transparent);
+    /* Buttons -- Danger Variant */
+    --color-danger-primary-btn-text: #FFFFFF;
+    --color-danger-primary-btn-bg: #E1392E;
+    --color-danger-primary-btn-bg-hover: #D22720;
+    --color-danger-primary-btn-bg-active: #C0070A;
+    --color-danger-secondary-btn-text: #AC0508;
+    --color-danger-secondary-btn-bg: color-mix(in oklch, #E1392E 13%, transparent);
+    --color-danger-secondary-btn-bg-hover: color-mix(in oklch, #E1392E 18%, transparent);
+    --color-danger-secondary-btn-bg-active: color-mix(in oklch, #E1392E 23%, transparent);
+    --color-danger-tertiary-btn-text: #C0070A;
+    --color-danger-tertiary-btn-bg-hover: color-mix(in oklch, #C0070A 9%, transparent);
+    --color-danger-tertiary-btn-bg-active: color-mix(in oklch, #C0070A 13%, transparent);
+    /* ICON BUTTONS */
+    /* Icon button -- Neutral Variant */
+    --color-neutral-icon-btn: color-mix(in oklch, #535663 70%, transparent);
+    --color-neutral-icon-btn-hover: #535663;
+    --color-neutral-icon-btn-active: color-mix(in oklch, #535663 70%, transparent);
+    --color-neutral-icon-btn-square-hover: color-mix(in oklch, #535663 7%, transparent);
+    --color-neutral-icon-btn-square-active: color-mix(in oklch, #535663 11%, transparent);
+    /* Icon button -- Brand Variant */
+    --color-brand-icon-btn: color-mix(in oklch, #5F3CC5 70%, transparent);
+    --color-brand-icon-btn-hover: #5F3CC5;
+    --color-brand-icon-btn-active: color-mix(in oklch, #5F3CC5 70%, transparent);
+    --color-brand-icon-btn-square-hover: color-mix(in oklch, #2C0070 5%, transparent);
+    --color-brand-icon-btn-square-active: color-mix(in oklch, #2C0070 10%, transparent);
+    /* Icon button -- Info Variant */
+    --color-info-icon-btn: color-mix(in oklch, #325CE3 70%, transparent);
+    --color-info-icon-btn-hover: #325CE3;
+    --color-info-icon-btn-active: color-mix(in oklch, #325CE3 70%, transparent);
+    --color-info-icon-btn-square-hover: color-mix(in oklch, #06037C 5%, transparent);
+    --color-info-icon-btn-square-active: color-mix(in oklch, #06037C 9%, transparent);
+    /* Icon button -- Success Variant */
+    --color-success-icon-btn: color-mix(in oklch, #07833C 70%, transparent);
+    --color-success-icon-btn-hover: #07833C;
+    --color-success-icon-btn-active: color-mix(in oklch, #07833C 70%, transparent);
+    --color-success-icon-btn-square-hover: color-mix(in oklch, #09672E 8%, transparent);
+    --color-success-icon-btn-square-active: color-mix(in oklch, #09672E 12%, transparent);
+    /* Icon button -- Warning Variant */
+    --color-warning-icon-btn: color-mix(in oklch, #A96A05 70%, transparent);
+    --color-warning-icon-btn-hover: #A96A05;
+    --color-warning-icon-btn-active: color-mix(in oklch, #A96A05 70%, transparent);
+    --color-warning-icon-btn-square-hover: color-mix(in oklch, #A96A05 10%, transparent);
+    --color-warning-icon-btn-square-active: color-mix(in oklch, #A96A05 14%, transparent);
+    /* Icon button -- Danger Variant */
+    --color-danger-icon-btn: color-mix(in oklch, #C0070A 70%, transparent);
+    --color-danger-icon-btn-hover: #C0070A;
+    --color-danger-icon-btn-active: color-mix(in oklch, #C0070A 70%, transparent);
+    --color-danger-icon-btn-square-hover: color-mix(in oklch, #C0070A 9%, transparent);
+    --color-danger-icon-btn-square-active: color-mix(in oklch, #C0070A 13%, transparent);
 }
 
 :root[data-theme="dark"] {
-    --color-banner-brand-bg: #1E153D;
-    --color-banner-brand-text: var(--purple-300);
-    --color-banner-brand-close-btn: var(--purple-350);
+    /* BANNERS */
+    /* Banners - Neutral Variant */
+    --color-banner-neutral-label: #BBBDC8;
+    --color-banner-neutral-border: color-mix(in oklch, #A2A2AE 40%, transparent);
+    --color-banner-neutral-bg: #28282E;
+    /* Banners - Info Variant */
+    --color-banner-info-label: #84A8FD;
+    --color-banner-info-border: color-mix(in oklch, #82B8DE 40%, transparent);
+    --color-banner-info-bg: #00253D;
+    /* Banners - Brand Variant */
+    --color-banner-brand-label: #ABA5FD;
     --color-banner-brand-border: color-mix(in oklch, #D8CFF7 40%, transparent);
-    --color-brand-cta-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
-    --color-brand-cta-btn-bg: #5417C3;
-    --color-brand-cta-btn-bg-hover: #612FD4;
-    --color-brand-cta-btn-bg-active: #5417C3;
-    --color-brand-default-btn-text: var(--purple-300);
-    --color-brand-default-btn-bg: color-mix(in oklch, var(--purple-350) 12%, transparent);
-    --color-brand-default-btn-bg-hover: color-mix(in oklch, var(--purple-350) 17%, transparent);
-    --color-brand-default-btn-bg-active: color-mix(in oklch, var(--purple-350) 12%, transparent);
-    --color-brand-subtle-btn-text: var(--purple-350);
-    --color-brand-subtle-btn-bg-hover: color-mix(in oklch, #8A6FFF 14%, transparent);
-    --color-brand-subtle-btn-bg-active: color-mix(in oklch, #8A6FFF 18%, transparent);
+    --color-banner-brand-bg: #1E153D;
+    /* Banners - Success Variant */
+    --color-banner-success-label: #6BD586;
+    --color-banner-success-border: color-mix(in oklch, #4ABF82 40%, transparent);
+    --color-banner-success-bg: #022210;
+    /* Banners - Warning Variant */
+    --color-banner-warning-label: #F8B325;
+    --color-banner-warning-border: color-mix(in oklch, #CEBA82 40%, transparent);
+    --color-banner-warning-bg: #332B00;
+    /* Banners - Danger Variant */
+    --color-banner-danger-label: #FF8B7C;
+    --color-banner-danger-border: color-mix(in oklch, #ED918C 40%, transparent);
+    --color-banner-danger-bg: #461616;
+    /* BUTTONS */
+    /* Buttons -- Brand Variant */
+    --color-brand-primary-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-brand-primary-btn-bg: #5417C3;
+    --color-brand-primary-btn-bg-hover: #612FD4;
+    --color-brand-primary-btn-bg-active: #5417C3;
+    --color-brand-secondary-btn-text: var(--purple-300);
+    --color-brand-secondary-btn-bg: color-mix(in oklch, var(--purple-350) 12%, transparent);
+    --color-brand-secondary-btn-bg-hover: color-mix(in oklch, var(--purple-350) 17%, transparent);
+    --color-brand-secondary-btn-bg-active: color-mix(in oklch, var(--purple-350) 12%, transparent);
+    --color-brand-tertiary-btn-text: var(--purple-350);
+    --color-brand-tertiary-btn-bg-hover: color-mix(in oklch, #8A6FFF 14%, transparent);
+    --color-brand-tertiary-btn-bg-active: color-mix(in oklch, #8A6FFF 18%, transparent);
+    /* Buttons -- Neutral Variant */
+    --color-neutral-primary-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-neutral-primary-btn-bg: #535663;
+    --color-neutral-primary-btn-bg-hover: #626573;
+    --color-neutral-primary-btn-bg-active: #535663;
+    --color-neutral-secondary-btn-text: #BBBDC8;
+    --color-neutral-secondary-btn-bg: color-mix(in oklch, #BBBDC8 12%, transparent);
+    --color-neutral-secondary-btn-bg-hover: color-mix(in oklch, #BBBDC8 17%, transparent);
+    --color-neutral-secondary-btn-bg-active: color-mix(in oklch, #BBBDC8 12%, transparent);
+    --color-neutral-tertiary-btn-text: #AAADBA;
+    --color-neutral-tertiary-btn-bg-hover: color-mix(in oklch, #9194A3 14%, transparent);
+    --color-neutral-tertiary-btn-bg-active: color-mix(in oklch, #9194A3 18%, transparent);
+    /* Buttons -- Info Variant */
+    --color-info-primary-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-info-primary-btn-bg: #1E41D3;
+    --color-info-primary-btn-bg-hover: #2E59EB;
+    --color-info-primary-btn-bg-active: #1E41D3;
+    --color-info-secondary-btn-text: #84A8FD;
+    --color-info-secondary-btn-bg: color-mix(in oklch, #97B6FE 12%, transparent);
+    --color-info-secondary-btn-bg-hover: color-mix(in oklch, #97B6FE 17%, transparent);
+    --color-info-secondary-btn-bg-active: color-mix(in oklch, #97B6FE 12%, transparent);
+    --color-info-tertiary-btn-text: #7199FE;
+    --color-info-tertiary-btn-bg-hover: color-mix(in oklch, #4D7BFD 12%, transparent);
+    --color-info-tertiary-btn-bg-active: color-mix(in oklch, #4D7BFD 17%, transparent);
+    /* Buttons -- Success Variant */
+    --color-success-primary-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-success-primary-btn-bg: #09672E;
+    --color-success-primary-btn-bg-hover: #087736;
+    --color-success-primary-btn-bg-active: #09672E;
+    --color-success-secondary-btn-text: #6BD586;
+    --color-success-secondary-btn-bg: color-mix(in oklch, #41AE61 12%, transparent);
+    --color-success-secondary-btn-bg-hover: color-mix(in oklch, #41AE61 17%, transparent);
+    --color-success-secondary-btn-bg-active: color-mix(in oklch, #41AE61 12%, transparent);
+    --color-success-tertiary-btn-text: #57C273;
+    --color-success-tertiary-btn-bg-hover: color-mix(in oklch, #2F9F52 12%, transparent);
+    --color-success-tertiary-btn-bg-active: color-mix(in oklch, #2F9F52 17%, transparent);
+    /* Buttons -- Warning Variant */
+    --color-warning-primary-btn-text: color-mix(in oklch, #000000 90%, transparent);
+    --color-warning-primary-btn-bg: #DB920D;
+    --color-warning-primary-btn-bg-hover: #EBA002;
+    --color-warning-primary-btn-bg-active: #DB920D;
+    --color-warning-secondary-btn-text: #F8B325;
+    --color-warning-secondary-btn-bg: color-mix(in oklch, #DB920D 12%, transparent);
+    --color-warning-secondary-btn-bg-hover: color-mix(in oklch, #DB920D 17%, transparent);
+    --color-warning-secondary-btn-bg-active: color-mix(in oklch, #DB920D 12%, transparent);
+    --color-warning-tertiary-btn-text: #EBA002;
+    --color-warning-tertiary-btn-bg-hover: color-mix(in oklch, #C8850D 12%, transparent);
+    --color-warning-tertiary-btn-bg-active: color-mix(in oklch, #C8850D 17%, transparent);
+    /* Buttons -- Danger Variant */
+    --color-danger-primary-btn-text: color-mix(in oklch, #FFFFFF 85%, transparent);
+    --color-danger-primary-btn-bg: #D22720;
+    --color-danger-primary-btn-bg-hover: #E1392E;
+    --color-danger-primary-btn-bg-active: #D22720;
+    --color-danger-secondary-btn-text: #FF8B7C;
+    --color-danger-secondary-btn-bg: color-mix(in oklch, #FD5F50 12%, transparent);
+    --color-danger-secondary-btn-bg-hover: color-mix(in oklch, #FD5F50 17%, transparent);
+    --color-danger-secondary-btn-bg-active: color-mix(in oklch, #FD5F50 12%, transparent);
+    --color-danger-tertiary-btn-text: #FF8B7C;
+    --color-danger-tertiary-btn-bg-hover: color-mix(in oklch, #F34C3E 12%, transparent);
+    --color-danger-tertiary-btn-bg-active: color-mix(in oklch, #F34C3E 17%, transparent);
+    /* ICON BUTTONS */
+    /* Icon button -- Neutral Variant */
+    --color-neutral-icon-btn: color-mix(in oklch, #AAADBA 70%, transparent);
+    --color-neutral-icon-btn-hover: #AAADBA;
+    --color-neutral-icon-btn-active: color-mix(in oklch, #AAADBA 70%, transparent);
+    --color-neutral-icon-btn-square-hover: color-mix(in oklch, #9194A3 14%, transparent);
+    --color-neutral-icon-btn-square-active: color-mix(in oklch, #9194A3 18%, transparent);
+    /* Icon button -- Brand Variant */
+    --color-brand-icon-btn: color-mix(in oklch, #9E94FD 70%, transparent);
+    --color-brand-icon-btn-hover: #9E94FD;
+    --color-brand-icon-btn-active: color-mix(in oklch, #9E94FD 70%, transparent);
+    --color-brand-icon-btn-square-hover: color-mix(in oklch, #8A6FFF 14%, transparent);
+    --color-brand-icon-btn-square-active: color-mix(in oklch, #8A6FFF 18%, transparent);
+    /* Icon button -- Info Variant */
+    --color-info-icon-btn: color-mix(in oklch, #7199FE 70%, transparent);
+    --color-info-icon-btn-hover: #7199FE;
+    --color-info-icon-btn-active: color-mix(in oklch, #7199FE 70%, transparent);
+    --color-info-icon-btn-square-hover: color-mix(in oklch, #4D7BFD 12%, transparent);
+    --color-info-icon-btn-square-active: color-mix(in oklch, #4D7BFD 17%, transparent);
+    /* Icon button -- Success Variant */
+    --color-success-icon-btn: color-mix(in oklch, #57C273 70%, transparent);
+    --color-success-icon-btn-hover: #57C273;
+    --color-success-icon-btn-active: color-mix(in oklch, #57C273 70%, transparent);
+    --color-success-icon-btn-square-hover: color-mix(in oklch, #09672E 8%, transparent);
+    --color-success-icon-btn-square-active: color-mix(in oklch, #2F9F52 17%, transparent);
+    /* Icon button -- Warning Variant */
+    --color-warning-icon-btn: color-mix(in oklch, #EBA002 70%, transparent);
+    --color-warning-icon-btn-hover: #EBA002;
+    --color-warning-icon-btn-active: color-mix(in oklch, #EBA002 70%, transparent);
+    --color-warning-icon-btn-square-hover: color-mix(in oklch, #C8850D 12%, transparent);
+    --color-warning-icon-btn-square-active: color-mix(in oklch, #C8850D 17%, transparent);
+    /* Icon button -- Danger Variant */
+    --color-danger-icon-btn: color-mix(in oklch, #FF8B7C 70%, transparent);
+    --color-danger-icon-btn-hover: #FF8B7C;
+    --color-danger-icon-btn-active: color-mix(in oklch, #FF8B7C 70%, transparent);
+    --color-danger-icon-btn-square-hover: color-mix(in oklch, #F34C3E 12%, transparent);
+    --color-danger-icon-btn-square-active: color-mix(in oklch, #F34C3E 17%, transparent);
 }
 
 /* TODO: This does not account for the button variant that also contains a icon */
@@ -55,57 +296,206 @@
     user-select: none;
 }
 
-.btn--cta {
-    --color-btn-text: var(--color-cta-btn-text);
-    --color-btn-bg: var(--color-cta-btn-bg);
+.btn:hover {
+    background-color: var(--color-btn-bg-hover);
 }
 
-.btn--cta:hover {
-    --color-btn-bg: var(--color-cta-btn-bg-hover);
+.btn:active {
+    background-color: var(--color-btn-bg-active);
 }
 
-.btn--cta:active {
-    --color-btn-bg: var(--color-cta-btn-bg-active);
+/* Buttons -- Neutral Variant */
+.btn--primary-neutral {
+    --color-btn-text : var(--color-neutral-primary-btn-text);
+    --color-btn-bg : var(--color-neutral-primary-btn-bg);
+    --color-btn-bg-hover : var(--color-neutral-primary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-neutral-primary-btn-bg-active); 
 }
 
-.btn--default {
-    --color-btn-text: var(--color-default-btn-text);
-    --color-btn-bg: var(--color-default-btn-bg);
+.btn--secondary-neutral {
+    --color-btn-text : var(--color-neutral-secondary-btn-text);
+    --color-btn-bg : var(--color-neutral-secondary-btn-bg);
+    --color-btn-bg-hover : var(--color-neutral-secondary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-neutral-secondary-btn-bg-active);
 }
 
-.btn--default:hover {
-    --color-btn-bg: var(--color-default-btn-bg-hover);
+.btn--tertiary-neutral {
+    --color-btn-text : var(--color-neutral-tertiary-btn-text);
+    --color-btn-bg : transparent;
+    --color-btn-bg-hover : var(--color-neutral-tertiary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-neutral-tertiary-btn-bg-active);
 }
 
-.btn--default:active {
-    --color-btn-bg: var(--color-default-btn-bg-active);
+/* Buttons -- Brand Variant */
+.btn--primary-brand {
+    --color-btn-text : var(--color-brand-primary-btn-text);
+    --color-btn-bg : var(--color-brand-primary-btn-bg);
+    --color-btn-bg-hover : var(--color-brand-primary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-brand-primary-btn-bg-active); 
 }
 
-.btn--subtle {
-    --color-btn-text: var(--color-subtle-btn-text);
+.btn--secondary-brand {
+    --color-btn-text : var(--color-brand-secondary-btn-text);
+    --color-btn-bg : var(--color-brand-secondary-btn-bg);
+    --color-btn-bg-hover : var(--color-brand-secondary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-brand-secondary-btn-bg-active);
+}
+
+.btn--tertiary-brand {
+    --color-btn-text : var(--color-brand-tertiary-btn-text);
+    --color-btn-bg : transparent;
+    --color-btn-bg-hover : var(--color-brand-tertiary-btn-bg-hover);
+    --color-btn-bg-active : var(--color-brand-tertiary-btn-bg-active);
+}
+
+/* Buttons -- Info Variant */
+.btn--primary-info {
+    --color-btn-text: var(--color-info-primary-btn-text);
+    --color-btn-bg: var(--color-info-primary-btn-bg);
+    --color-btn-bg-hover: var(--color-info-primary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-info-primary-btn-bg-active);
+}
+
+.btn--secondary-info {
+    --color-btn-text: var(--color-info-secondary-btn-text);
+    --color-btn-bg: var(--color-info-secondary-btn-bg);
+    --color-btn-bg-hover: var(--color-info-secondary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-info-secondary-btn-bg-active);
+}
+
+.btn--tertiary-info {
+    --color-btn-text: var(--color-info-tertiary-btn-text);
     --color-btn-bg: transparent;
+    --color-btn-bg-hover: var(--color-info-tertiary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-info-tertiary-btn-bg-active);
 }
 
-.btn--subtle:hover {
-    --color-btn-bg: var(--color-subtle-btn-bg-hover);
+/* Buttons -- Success Variant */
+.btn--primary-success {
+    --color-btn-text: var(--color-success-primary-btn-text);
+    --color-btn-bg: var(--color-success-primary-btn-bg);
+    --color-btn-bg-hover: var(--color-success-primary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-success-primary-btn-bg-active);
 }
 
-.btn--subtle:active {
-    --color-btn-bg: var(--color-subtle-btn-bg-active);
+.btn--secondary-success {
+    --color-btn-text: var(--color-success-secondary-btn-text);
+    --color-btn-bg: var(--color-success-secondary-btn-bg);
+    --color-btn-bg-hover: var(--color-success-secondary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-success-secondary-btn-bg-active);
 }
 
-.btn--brand {
-    --color-cta-btn-text : var(--color-brand-cta-btn-text);
-    --color-cta-btn-bg : var(--color-brand-cta-btn-bg);
-    --color-cta-btn-bg-hover : var(--color-brand-cta-btn-bg-hover);
-    --color-cta-btn-bg-active : var(--color-brand-cta-btn-bg-active);
-    --color-default-btn-text : var(--color-brand-default-btn-text);
-    --color-default-btn-bg : var(--color-brand-default-btn-bg);
-    --color-default-btn-bg-hover : var(--color-brand-default-btn-bg-hover);
-    --color-default-btn-bg-active : var(--color-brand-default-btn-bg-active);
-    --color-subtle-btn-text : var(--color-brand-subtle-btn-text);
-    --color-subtle-btn-bg-hover : var(--color-brand-subtle-btn-bg-hover);
-    --color-subtle-btn-bg-active : var(--color-brand-subtle-btn-bg-active);
+.btn--tertiary-success {
+    --color-btn-text: var(--color-success-tertiary-btn-text);
+    --color-btn-bg: transparent;
+    --color-btn-bg-hover: var(--color-success-tertiary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-success-tertiary-btn-bg-active);
+}
+
+/* Buttons -- Warning Variant */
+.btn--primary-warning {
+    --color-btn-text: var(--color-warning-primary-btn-text);
+    --color-btn-bg: var(--color-warning-primary-btn-bg);
+    --color-btn-bg-hover: var(--color-warning-primary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-warning-primary-btn-bg-active);
+}
+
+.btn--secondary-warning {
+    --color-btn-text: var(--color-warning-secondary-btn-text);
+    --color-btn-bg: var(--color-warning-secondary-btn-bg);
+    --color-btn-bg-hover: var(--color-warning-secondary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-warning-secondary-btn-bg-active);
+}
+
+.btn--tertiary-warning {
+    --color-btn-text: var(--color-warning-tertiary-btn-text);
+    --color-btn-bg: transparent;
+    --color-btn-bg-hover: var(--color-warning-tertiary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-warning-tertiary-btn-bg-active);
+}
+
+/* Buttons -- Danger Variant */
+.btn--primary-danger {
+    --color-btn-text: var(--color-danger-primary-btn-text);
+    --color-btn-bg: var(--color-danger-primary-btn-bg);
+    --color-btn-bg-hover: var(--color-danger-primary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-danger-primary-btn-bg-active);
+}
+
+.btn--secondary-danger {
+    --color-btn-text: var(--color-danger-secondary-btn-text);
+    --color-btn-bg: var(--color-danger-secondary-btn-bg);
+    --color-btn-bg-hover: var(--color-danger-secondary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-danger-secondary-btn-bg-active);
+}
+
+.btn--tertiary-danger {
+    --color-btn-text: var(--color-danger-tertiary-btn-text);
+    --color-btn-bg: transparent;
+    --color-btn-bg-hover: var(--color-danger-tertiary-btn-bg-hover);
+    --color-btn-bg-active: var(--color-danger-tertiary-btn-bg-active);
+}
+
+.icon-btn {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    color: var(--color-icon-btn);
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.icon-btn-square:hover {
+    background-color: var(--color-icon-btn-square-hover);
+}
+
+.icon-btn-square:active {
+    background-color: var(--color-icon-btn-square-active);
+}
+
+.icon-btn:hover {
+    color: var(--color-icon-btn-hover);
+}
+
+.icon-btn:active {
+    color: var(--color-icon-btn-active);
+}
+
+.icon-btn--neutral {
+    --color-icon-btn: var(--color-neutral-icon-btn);
+    --color-icon-btn-hover: var(--color-neutral-icon-btn-hover);
+    --color-icon-btn-active: var(--color-neutral-icon-btn-active);
+}
+
+.icon-btn--brand {
+    --color-icon-btn: var(--color-brand-icon-btn);
+    --color-icon-btn-hover: var(--color-brand-icon-btn-hover);
+    --color-icon-btn-active: var(--color-brand-icon-btn-active);
+}
+
+.icon-btn--info {
+    --color-icon-btn: var(--color-info-icon-btn);
+    --color-icon-btn-hover: var(--color-info-icon-btn-hover);
+    --color-icon-btn-active: var(--color-info-icon-btn-active);
+}
+
+.icon-btn--success {
+    --color-icon-btn: var(--color-success-icon-btn);
+    --color-icon-btn-hover: var(--color-success-icon-btn-hover);
+    --color-icon-btn-active: var(--color-success-icon-btn-active);
+}
+
+.icon-btn--warning {
+    --color-icon-btn: var(--color-warning-icon-btn);
+    --color-icon-btn-hover: var(--color-warning-icon-btn-hover);
+    --color-icon-btn-active: var(--color-warning-icon-btn-active);
+}
+
+.icon-btn--danger {
+    --color-icon-btn: var(--color-danger-icon-btn);
+    --color-icon-btn-hover: var(--color-danger-icon-btn-hover);
+    --color-icon-btn-active: var(--color-danger-icon-btn-active);
 }
 
 .banner {
@@ -115,6 +505,10 @@
     background-color: var(--banner-bg-color);
     align-items: center;
     font-size: 0.9375rem;
+}
+
+.banner__link {
+    color: var(--color-banner-link);
 }
 
 .banner__content {
@@ -157,28 +551,46 @@
 
 .banner__close-btn {
     font-size: 1.0667em;
-    display: flex;
     align-self: flex-start;
     padding: 0.6875em;
-    cursor: pointer;
-    color: color-mix(in oklch, var(--color-banner-close-btn) 70%, transparent);
-}
-
-.banner__close-btn:hover {
-    color: var(--color-banner-close-btn);
-}
-
-.banner__close-btn:active {
-    color: color-mix(in oklch, var(--color-banner-close-btn) 70%, transparent);
 }
 
 .banner--top {
     border-bottom: 1px solid var(--color-banner-border);
 }
 
+.banner--neutral {
+    --banner-bg-color: var(--color-banner-neutral-bg);
+    --banner-text-color: var(--color-banner-neutral-label);
+    --color-banner-border: var(--color-banner-neutral-border);
+}
+
 .banner--brand {
     --banner-bg-color: var(--color-banner-brand-bg);
-    --banner-text-color: var(--color-banner-brand-text);
-    --color-banner-close-btn: var(--color-banner-brand-close-btn);
+    --banner-text-color: var(--color-banner-brand-label);
     --color-banner-border: var(--color-banner-brand-border);
+}
+
+.banner--info {
+    --banner-bg-color: var(--color-banner-info-bg);
+    --banner-text-color: var(--color-banner-info-label);
+    --color-banner-border: var(--color-banner-info-border);
+}
+
+.banner--success {
+    --banner-bg-color: var(--color-banner-success-bg);
+    --banner-text-color: var(--color-banner-success-label);
+    --color-banner-border: var(--color-banner-success-border);
+}
+
+.banner--warning {
+    --banner-bg-color: var(--color-banner-warning-bg);
+    --banner-text-color: var(--color-banner-warning-label);
+    --color-banner-border: var(--color-banner-warning-border);
+}
+
+.banner--danger {
+    --banner-bg-color: var(--color-banner-danger-bg);
+    --banner-text-color: var(--color-banner-danger-label);
+    --color-banner-border: var(--color-banner-danger-border);
 }
