@@ -503,10 +503,6 @@
     --color-icon-btn-active: var(--color-danger-icon-btn-active);
 }
 
-.banner-wrapper {
-    container: banner / inline-size;
-}
-
 :root {
     /* Banner grid layout variables */
     --banner-horizontal-padding: 13px;
@@ -529,6 +525,10 @@
         ". banner-btns banner-btns banner-btns banner-btns .";
 }
 
+.banner-wrapper {
+    container: banner / inline-size;
+}
+
 .banner {
     box-sizing: border-box;
     display: grid;
@@ -538,7 +538,7 @@
     place-items: start;
     color: var(--banner-text-color);
     background-color: var(--banner-bg-color);
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
 }
 
 .banner__link {
@@ -575,7 +575,7 @@
     justify-content: center;
 }
 
-@container (width >= 700px) and (width < 1000px) {
+@container (width >= 47em) and (width < 67em) {
     .banner--navbar-alerts[data-process="notifications"] {
         grid-template-areas: var(--banner-grid-template-areas-md);
         grid-template-columns: var(--banner-grid-template-columns-md);
@@ -584,7 +584,7 @@
     }
 }
 
-@container (width < 700px) {
+@container (width < 47em) {
     .banner {
         grid-template-areas: var(--banner-grid-template-areas-md);
         grid-template-columns: var(--banner-grid-template-columns-md);
@@ -600,7 +600,7 @@
     }
 }
 
-@container (width < 400px) {
+@container (width < 27em) {
     .banner {
         grid-template-areas: var(--banner-grid-template-areas-sm);
     }
