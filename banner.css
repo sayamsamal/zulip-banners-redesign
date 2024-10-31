@@ -443,10 +443,9 @@
 
 .icon-btn {
     display: flex;
-    width: 16px;
-    height: 16px;
+    font-size: var(--base-font-size-px);
     color: var(--color-icon-btn, --color-neutral-icon-btn);
-    padding: 7px;
+    padding: 0.4375em;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -560,7 +559,6 @@
 .banner__close-btn {
     display: flex;
     grid-area: banner-close-btn;
-    font-size: 1.0667em;
     padding: 0.6875em;
     margin-left: 5px;
 }
@@ -575,7 +573,7 @@
     justify-content: center;
 }
 
-@container (width >= 47em) and (width < 67em) {
+@container (width >= 44em) and (width < 63em) {
     .banner--navbar-alerts[data-process="notifications"] {
         grid-template-areas: var(--banner-grid-template-areas-md);
         grid-template-columns: var(--banner-grid-template-columns-md);
@@ -584,7 +582,7 @@
     }
 }
 
-@container (width < 47em) {
+@container (width < 44em) {
     .banner {
         grid-template-areas: var(--banner-grid-template-areas-md);
         grid-template-columns: var(--banner-grid-template-columns-md);
@@ -600,7 +598,7 @@
     }
 }
 
-@container (width < 27em) {
+@container (width < 25em) {
     .banner {
         grid-template-areas: var(--banner-grid-template-areas-sm);
     }
